@@ -29,7 +29,6 @@ export class CandidatesController {
   }
 
   async create(req: Request, res: Response) {
-    console.log("POST /candidates", req.body);
     const candidate = await this.service.create(req.body);
     res
       .status(201)
